@@ -1,9 +1,11 @@
 import express from 'express';
+import {serverConfig} from './config/index.js'
+import pingRouter  from './routers/ping.router.js';
 const app = express();
-const PORT = 3001;
-app.get('/ping',(req,res)=>{
-    res.send('pong');
-})
-app.listen(PORT,()=>{
-    console.log(`Server is running on port ${PORT}`);
-})
+
+app.use(pingRouter); // registering all the routes and their corresponding routes with our app server object
+
+console.log(`Envirement variables loaded`);
+app.listen(serverConfig.PORT,()=>{
+    console.log(`Server is running on port ${serverConfig.PORT}`);
+});
