@@ -1,6 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
 import fs from 'fs/promises';
-import {NotFoundError} from "../utils/errors/app.error.ts";
+import {NotFoundError} from "../utils/errors/app.error.js";
 
 export const pingHandler = async (_req: Request,res: Response,next: NextFunction) => {
     try {
@@ -10,5 +10,4 @@ export const pingHandler = async (_req: Request,res: Response,next: NextFunction
         throw new NotFoundError("File not found");
     }
 };
-
 

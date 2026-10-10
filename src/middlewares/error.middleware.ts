@@ -1,5 +1,5 @@
 import { NextFunction, Request,Response } from "express";
-import {AppError} from "../utils/errors/app.error.ts";
+import {AppError} from "../utils/errors/app.error.js";
 
 export const genericErrorHandler = (err:AppError,req:Request,res:Response,next:NextFunction)=>{
     res.status(err.statusCode).json({
