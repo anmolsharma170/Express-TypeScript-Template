@@ -1,4 +1,20 @@
-node_modules
-dist
+# Installed npm dependencies. Recreate these with `npm install`.
+node_modules/
+
+# TypeScript build output (JavaScript, declarations, and source maps).
+dist/
+
+# Local environment configuration. This may contain secrets and machine-specific values.
 .env
+.env.*
+!.env.example
+
+# Runtime application logs created by Winston.
 logs/
+
+# Local OS/editor files.
+.DS_Store
+Thumbs.db
+.vscode/
+
+INTERVIEW_GUIDE.md
